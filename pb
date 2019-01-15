@@ -74,7 +74,7 @@ elif account == '0':
 else:
     account == 'Unknown account type'
 
-print(f'Your username is {username} and your account type is {account})\n')
+print(f'Your username is {username} and your account type is {account}\n')
 if args.list:
     while True:
         list = '\n'.join(pastebin_api.pastelist().splitlines())
