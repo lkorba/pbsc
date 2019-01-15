@@ -28,6 +28,7 @@ parser.add_argument('-l', '--list', help='List your pastes', action='store_true'
 
 args = parser.parse_args()
 
+
 if args.public:
     if args.list:
         print('The -l should be used alone. Check "pb -h" for help.')
@@ -63,7 +64,17 @@ if args.format:
     paste_format = args.format
     print('Paste format: ' + paste_format + '\n')
 data = ''
+userdata=pastebin_api.userdetails()
+username = re.findall("<user_name>(.*?)</user_name>", userdata)[0]
+account = re.findall("<user_account_type>(.*?)</user_account_type>", userdata)[0]
+if account == '1':
+    account = 'PRO'
+elif account == '0':
+    account = 'normal'
+else:
+    account == 'Unknown account type'
 
+print(f'Your username is {username} and your account type is {account})\n')
 if args.list:
     while True:
         list = '\n'.join(pastebin_api.pastelist().splitlines())
