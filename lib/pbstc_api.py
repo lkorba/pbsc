@@ -1,4 +1,4 @@
-import api_config
+import lib.pbstc_api_config as api_config
 import urllib
 import urllib.request
 import os

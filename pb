@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import pastebin_api
+import lib.pbstc_api as pastebin_api
 import sys
 import argparse
 import re
@@ -62,6 +62,7 @@ if args.format:
         sys.exit()
     paste_format = args.format
     print('Paste format: ' + paste_format + '\n')
+
 data = ''
 userdata=pastebin_api.userdetails()
 username = re.findall("<user_name>(.*?)</user_name>", userdata)[0]
@@ -121,6 +122,7 @@ if not args.list:
         with open(args.open, 'r') as f:
             data = f.read()
     else:
+        print("Start typing, press Ctrl+d when finished")
         for line in sys.stdin:
             data = data + line
     try:
