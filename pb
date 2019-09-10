@@ -121,7 +121,8 @@ if not args.list:
         print('Opening file: ' + args.open + '\n')
         with open(args.open, 'r') as f:
             data = f.read()
-            name = args.open
+            if not args.name:
+                name = args.open
     else:
         print("Start typing, press Ctrl+d when finished")
         for line in sys.stdin:
