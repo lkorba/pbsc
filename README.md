@@ -1,8 +1,9 @@
 # pbstc - pastebin simple terminal client
 
-It is best to add folder with this script to PATH (don't forget to "chmod +x pb" if running in Linux)
+Rename pbstc_api_config.py.example to pbstc_api_config.py and configure API key, username, password
+You will find your API key here: https://pastebin.com/api
 
-Don't forget to set up your account in api_config.py - you will find your API key here: https://pastebin.com/api
+It is best to add folder with this script to PATH (don't forget to "chmod +x pb" if running in Linux)
 
 ## Example usage:
 

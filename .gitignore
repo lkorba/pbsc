@@ -6,6 +6,13 @@ env
 *.txt
 *.conf
 *.log
+*config.py
 !example.txt
 !example.log
 !example.conf
+lib/*config.py
+
+
+
+# pbstc_api_config.py  XXXXXXXXXXXX
+# pbstc_api_config.py.example   VVVV
